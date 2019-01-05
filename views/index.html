@@ -15,6 +15,7 @@
   <script>
     fetch('https://osm1.skunkhenry.com:8443/console').then(function (response) {
       if (response.ok) {
+        console.log(response.headers);
         return console.log("ok")
       }
       console.log("Network response was not ok.");
