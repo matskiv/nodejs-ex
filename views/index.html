@@ -8,29 +8,7 @@
 
 <body>
   <h1>iFrame test</h1>
-  <iframe src="http://matskiv.com" id="iframe2" width="400px"></iframe>
-  <br />
   <iframe src="https://osm1.skunkhenry.com:8443/console" id="target_iframe" width="400px" height="400px"></iframe>
-
-  <script>
-    fetch('https://osm1.skunkhenry.com:8443/console').then(function (response) {
-      if (response.ok) {
-        console.log(response.headers);
-        console.log(response.headers.keys());
-        response.headers.forEach(header => console.log(header));
-        return console.log("ok")
-      }
-      console.log("Network response was not ok.");
-    }).catch(function (error) {
-      console.log('There has been a problem with your fetch operation: ', error.message);
-    });
-    
-    var req = new XMLHttpRequest();
-    req.open('GET', 'https://osm1.skunkhenry.com:8443/console', false);
-    req.send(null);
-    var headers = req.getAllResponseHeaders().toLowerCase();
-    console.log(headers);
-  </script>
 </body>
 
 </html>
